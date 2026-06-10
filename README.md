@@ -2,6 +2,19 @@
 
 Upload Windows EVTX log files and get a full AI-powered forensic investigation report.
 
+## What It Does
+
+ForensIQ is an end-to-end automated digital forensics pipeline with a web interface. Upload your Windows Event Logs and get a full investigation report without touching the command line.
+
+**Pipeline stages:**
+
+1. **Ingest & Unify** — Parses Windows Security and System EVTX logs + optional Mordor attack simulation data into a single chronological timeline
+2. **Threat Hunting** — Rule-based engine scans for suspicious keywords, critical Event IDs (1102, 7045), and maps every flagged event to a MITRE ATT&CK technique
+3. **ML Anomaly Detection** — Isolation Forest model scores every event 0–100 based on timing patterns, process behavior, and source distributions — no signatures, purely behavioral
+4. **Attack Chain Reconstruction** — Temporally clusters suspicious events into coherent attack sequences with aggregate risk scores
+5. **Forensic Dashboard** — Auto-generates visualizations: timing distributions, risk score timeline, MITRE tactic breakdown
+6. **AI Investigation Report** — Structured forensic report generated automatically by LLaMA 3.3-70B via Groq API
+
 ## Quick Start (Local)
 
 ```bash
